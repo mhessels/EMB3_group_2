@@ -1,0 +1,42 @@
+11:35:23 **** Auto Build of configuration Debug for project statemachine ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../statemachine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'statemachine':
+../src/helloworld.c:46:8: warning: variable 'ai' set but not used [-Wunused-but-set-variable]
+    int ai = 0;
+        ^
+../src/helloworld.c:45:8: warning: variable 'res' set but not used [-Wunused-but-set-variable]
+    int res = LOW;
+        ^
+../src/helloworld.c:44:8: warning: unused variable 'temp' [-Wunused-variable]
+    int temp = 0x1;
+        ^
+../src/helloworld.c:42:71: warning: variable 'btn_3' set but not used [-Wunused-but-set-variable]
+    u32 sw_1 = 0, sw_2 = 0, sw_3 = 0 , sw_4 = 0, btn_1 = 0, btn_2 = 0, btn_3 = 0, btn_4 = 0, init = 0;
+                                                                       ^
+../src/helloworld.c:42:60: warning: variable 'btn_2' set but not used [-Wunused-but-set-variable]
+    u32 sw_1 = 0, sw_2 = 0, sw_3 = 0 , sw_4 = 0, btn_1 = 0, btn_2 = 0, btn_3 = 0, btn_4 = 0, init = 0;
+                                                            ^
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../statemachine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: statemachine.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../statemachine_bsp/ps7_cortexa9_0/lib -o "statemachine.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: statemachine.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size statemachine.elf  |tee "statemachine.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24768	   1200	  22628	  48596	   bdd4	statemachine.elf
+Finished building: statemachine.elf.size
+ 
+
+11:35:24 Build Finished (took 769ms)
+

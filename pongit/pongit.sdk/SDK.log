@@ -1,0 +1,2050 @@
+09:42:11 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+09:42:24 INFO  : XSDB server has started successfully.
+09:42:30 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+10:55:10 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:55:11 INFO  : XSDB server has started successfully.
+10:23:42 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:23:46 INFO  : XSDB server has started successfully.
+10:23:58 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+10:24:00 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+10:24:03 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1461572160000,  Project:1460965286000
+10:24:03 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+10:24:03 INFO  : Copied contents of /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+10:24:08 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:24:13 INFO  : 
+10:24:14 INFO  : Updating hardware inferred compiler options for statemachine.
+10:24:14 INFO  : Clearing existing target manager status.
+10:37:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:43:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:12:07 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:12:12 INFO  : XSDB server has started successfully.
+11:12:18 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+11:12:26 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:12:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:12:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:12:51 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:14:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:14:02 INFO  : 'fpga -state' command is executed.
+11:14:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:14:02 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:14:02 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:14:03 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:14:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:14:03 INFO  : 'stop' command is executed.
+11:14:04 INFO  : 'ps7_init' command is executed.
+11:14:04 INFO  : 'ps7_post_config' command is executed.
+11:14:04 INFO  : 'con' command is executed.
+11:14:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:14:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:05 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:14:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:14:05 INFO  : Memory regions updated for context APU
+11:14:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:05 INFO  : 'con' command is executed.
+11:14:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+11:15:56 INFO  : Disconnected from the channel tcfchan#1.
+11:15:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:15:56 INFO  : 'fpga -state' command is executed.
+11:15:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:15:57 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:15:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:15:57 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:15:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:15:57 INFO  : 'stop' command is executed.
+11:15:58 INFO  : 'ps7_init' command is executed.
+11:15:58 INFO  : 'ps7_post_config' command is executed.
+11:15:58 INFO  : 'con' command is executed.
+11:15:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:15:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:15:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:15:59 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:15:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:15:59 INFO  : Memory regions updated for context APU
+11:15:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:16:00 INFO  : 'con' command is executed.
+11:16:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+11:16:06 INFO  : Disconnected from the channel tcfchan#2.
+11:16:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:16:06 INFO  : 'fpga -state' command is executed.
+11:16:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:16:07 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:16:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:16:07 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:16:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:16:08 INFO  : 'stop' command is executed.
+11:16:08 INFO  : 'ps7_init' command is executed.
+11:16:09 INFO  : 'ps7_post_config' command is executed.
+11:16:09 INFO  : 'con' command is executed.
+11:16:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:16:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:16:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:16:10 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:16:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:16:10 INFO  : Memory regions updated for context APU
+11:16:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:16:10 INFO  : 'con' command is executed.
+11:16:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+11:18:54 INFO  : Disconnected from the channel tcfchan#3.
+11:19:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:19:05 INFO  : 'fpga -state' command is executed.
+11:19:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:19:06 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:19:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:19:07 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:19:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:19:07 INFO  : 'stop' command is executed.
+11:19:08 INFO  : 'ps7_init' command is executed.
+11:19:08 INFO  : 'ps7_post_config' command is executed.
+11:19:08 INFO  : 'con' command is executed.
+11:19:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:19:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:19:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:19:09 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:19:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:19:09 INFO  : Memory regions updated for context APU
+11:19:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:19:09 INFO  : 'con' command is executed.
+11:19:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+11:20:27 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:20:45 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:20:46 INFO  : XSDB server has started successfully.
+11:20:46 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+11:20:47 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:21:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:21:10 INFO  : 'fpga -state' command is executed.
+11:21:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:21:12 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:21:12 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:21:12 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:21:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:21:13 INFO  : 'stop' command is executed.
+11:21:14 INFO  : 'ps7_init' command is executed.
+11:21:14 INFO  : 'ps7_post_config' command is executed.
+11:21:14 INFO  : 'con' command is executed.
+11:21:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:21:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:21:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:21:15 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:21:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:21:15 INFO  : Memory regions updated for context APU
+11:21:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:21:15 INFO  : 'con' command is executed.
+11:21:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+11:22:03 INFO  : Disconnected from the channel tcfchan#1.
+11:22:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:22:04 INFO  : 'fpga -state' command is executed.
+11:22:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:22:08 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:22:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:22:08 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:22:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:22:09 INFO  : 'stop' command is executed.
+11:23:27 ERROR : Timed out. 180 seconds have elapsed while waiting for XSDB server to launch.
+11:23:27 WARN  : Unexpected exception occurred.
+java.lang.Exception: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.Command.<init>(Command.java:83)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$8.<init>(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueTcfCmd(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.access$4(XSDBCommandManager.java:381)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$7.run(XSDBCommandManager.java:376)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.AbstractChannel.sendCommand(AbstractChannel.java:874)
+	at org.eclipse.tcf.core.Command.<init>(Command.java:79)
+	... 6 more
+11:24:50 INFO  : 'ps7_init' command is executed.
+11:24:53 INFO  : 'ps7_post_config' command is executed.
+11:24:53 INFO  : 'con' command is executed.
+11:24:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:24:55 INFO  : 'fpga -state' command is executed.
+11:24:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:24:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:58 ERROR : DEVICEEN is 0
+11:24:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:26:29 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:26:31 INFO  : XSDB server has started successfully.
+11:26:31 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+11:26:32 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:26:52 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:26:53 INFO  : XSDB server has started successfully.
+11:26:54 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+11:26:54 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:31:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:31:18 INFO  : 'fpga -state' command is executed.
+11:31:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:31:20 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:31:20 ERROR : no targets found with "name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"". available targets:
+  1  DAP (JTAG port open error. AP transaction error, DAP status f0000021)
+  2* xc7z010
+11:31:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+----------------End of Script----------------
+
+11:38:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:41:06 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:41:08 INFO  : XSDB server has started successfully.
+11:41:08 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+11:41:08 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:41:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:41:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:41:22 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:41:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:41:33 INFO  : 'fpga -state' command is executed.
+11:41:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:41:34 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:41:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:41:34 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:41:35 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:41:35 INFO  : 'stop' command is executed.
+11:41:36 INFO  : 'ps7_init' command is executed.
+11:41:36 INFO  : 'ps7_post_config' command is executed.
+11:41:36 INFO  : 'con' command is executed.
+11:41:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:41:36 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:41:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:41:37 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:41:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:41:37 INFO  : Memory regions updated for context APU
+11:41:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:41:37 INFO  : 'con' command is executed.
+11:41:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+11:42:51 INFO  : Disconnected from the channel tcfchan#1.
+11:56:50 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:56:51 INFO  : XSDB server has started successfully.
+11:56:52 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+11:56:52 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:56:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:56:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:56:59 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:57:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:57:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:57:17 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:57:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:57:33 INFO  : 'fpga -state' command is executed.
+11:57:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:57:34 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:57:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:57:34 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:57:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:57:34 INFO  : 'stop' command is executed.
+11:57:35 INFO  : 'ps7_init' command is executed.
+11:57:35 INFO  : 'ps7_post_config' command is executed.
+11:57:35 INFO  : 'con' command is executed.
+11:57:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:36 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:57:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:36 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:57:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:57:36 INFO  : Memory regions updated for context APU
+11:57:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:37 INFO  : 'con' command is executed.
+11:57:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+11:59:32 INFO  : Disconnected from the channel tcfchan#1.
+11:59:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+11:59:33 INFO  : 'fpga -state' command is executed.
+11:59:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:59:33 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:59:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:59:33 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:59:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+11:59:34 INFO  : 'stop' command is executed.
+11:59:35 INFO  : 'ps7_init' command is executed.
+11:59:35 INFO  : 'ps7_post_config' command is executed.
+11:59:35 INFO  : 'con' command is executed.
+11:59:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:59:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:59:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:59:36 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:59:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+11:59:36 INFO  : Memory regions updated for context APU
+11:59:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:59:36 INFO  : 'con' command is executed.
+11:59:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:02:07 INFO  : Disconnected from the channel tcfchan#2.
+12:02:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:02:08 INFO  : 'fpga -state' command is executed.
+12:02:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:02:08 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:02:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:02:08 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:02:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:02:09 INFO  : 'stop' command is executed.
+12:02:10 INFO  : 'ps7_init' command is executed.
+12:02:10 INFO  : 'ps7_post_config' command is executed.
+12:02:10 INFO  : 'con' command is executed.
+12:02:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:02:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:11 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:02:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:02:11 INFO  : Memory regions updated for context APU
+12:02:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:11 INFO  : 'con' command is executed.
+12:02:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:02:48 INFO  : Disconnected from the channel tcfchan#3.
+12:02:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:02:49 INFO  : 'fpga -state' command is executed.
+12:02:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:02:49 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:02:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:02:49 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:02:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:02:50 INFO  : 'stop' command is executed.
+12:02:51 INFO  : 'ps7_init' command is executed.
+12:02:51 INFO  : 'ps7_post_config' command is executed.
+12:02:51 INFO  : 'con' command is executed.
+12:02:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:02:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:52 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:02:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:02:52 INFO  : Memory regions updated for context APU
+12:02:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:52 INFO  : 'con' command is executed.
+12:02:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:03:19 INFO  : Disconnected from the channel tcfchan#4.
+12:03:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:03:19 INFO  : 'fpga -state' command is executed.
+12:03:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:03:19 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:03:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:03:20 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:03:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:03:20 INFO  : 'stop' command is executed.
+12:03:21 INFO  : 'ps7_init' command is executed.
+12:03:21 INFO  : 'ps7_post_config' command is executed.
+12:03:21 INFO  : 'con' command is executed.
+12:03:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:03:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:03:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:03:22 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:03:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:03:22 INFO  : Memory regions updated for context APU
+12:03:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:03:23 INFO  : 'con' command is executed.
+12:03:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:04:05 INFO  : Disconnected from the channel tcfchan#5.
+12:04:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:04:05 INFO  : 'fpga -state' command is executed.
+12:04:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:04:06 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:04:06 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:04:06 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:04:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:04:07 INFO  : 'stop' command is executed.
+12:04:08 INFO  : 'ps7_init' command is executed.
+12:04:08 INFO  : 'ps7_post_config' command is executed.
+12:04:08 INFO  : 'con' command is executed.
+12:04:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:04:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:09 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:04:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:04:09 INFO  : Memory regions updated for context APU
+12:04:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:09 INFO  : 'con' command is executed.
+12:04:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:04:22 INFO  : Disconnected from the channel tcfchan#6.
+12:04:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:04:23 INFO  : 'fpga -state' command is executed.
+12:04:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:04:23 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:04:23 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:04:24 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:04:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:04:24 INFO  : 'stop' command is executed.
+12:04:25 INFO  : 'ps7_init' command is executed.
+12:04:25 INFO  : 'ps7_post_config' command is executed.
+12:04:25 INFO  : 'con' command is executed.
+12:04:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:04:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:26 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:04:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:04:26 INFO  : Memory regions updated for context APU
+12:04:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:26 INFO  : 'con' command is executed.
+12:04:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:05:49 INFO  : Disconnected from the channel tcfchan#7.
+12:05:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:05:50 INFO  : 'fpga -state' command is executed.
+12:05:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:05:50 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:05:51 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:05:51 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:05:51 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:05:51 INFO  : 'stop' command is executed.
+12:05:52 INFO  : 'ps7_init' command is executed.
+12:05:52 INFO  : 'ps7_post_config' command is executed.
+12:05:52 INFO  : 'con' command is executed.
+12:05:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:05:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:05:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:05:53 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:05:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:05:53 INFO  : Memory regions updated for context APU
+12:05:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:05:53 INFO  : 'con' command is executed.
+12:05:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:07:01 INFO  : Disconnected from the channel tcfchan#8.
+12:07:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:07:02 INFO  : 'fpga -state' command is executed.
+12:07:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:07:02 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:07:02 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:07:03 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:07:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:07:03 INFO  : 'stop' command is executed.
+12:07:04 INFO  : 'ps7_init' command is executed.
+12:07:04 INFO  : 'ps7_post_config' command is executed.
+12:07:04 INFO  : 'con' command is executed.
+12:07:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:05 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:07:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:05 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:07:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:07:05 INFO  : Memory regions updated for context APU
+12:07:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:05 INFO  : 'con' command is executed.
+12:07:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:07:43 INFO  : Disconnected from the channel tcfchan#9.
+12:07:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:07:44 INFO  : 'fpga -state' command is executed.
+12:07:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:07:44 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:07:44 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:07:44 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:07:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:07:45 INFO  : 'stop' command is executed.
+12:07:46 INFO  : 'ps7_init' command is executed.
+12:07:46 INFO  : 'ps7_post_config' command is executed.
+12:07:46 INFO  : 'con' command is executed.
+12:07:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:46 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:07:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:47 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:07:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:07:47 INFO  : Memory regions updated for context APU
+12:07:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:47 INFO  : 'con' command is executed.
+12:07:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:08:17 INFO  : Disconnected from the channel tcfchan#10.
+12:08:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:08:18 INFO  : 'fpga -state' command is executed.
+12:08:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:08:24 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:08:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:08:25 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:08:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:08:25 INFO  : 'stop' command is executed.
+12:08:26 INFO  : 'ps7_init' command is executed.
+12:08:26 INFO  : 'ps7_post_config' command is executed.
+12:08:26 INFO  : 'con' command is executed.
+12:08:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:08:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:08:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:08:27 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:08:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:08:27 INFO  : Memory regions updated for context APU
+12:08:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:08:27 INFO  : 'con' command is executed.
+12:08:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:08:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:08:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:08:54 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:09:03 INFO  : Disconnected from the channel tcfchan#11.
+12:09:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:09:04 INFO  : 'fpga -state' command is executed.
+12:09:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:09:04 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:09:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:09:05 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:09:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:09:05 INFO  : 'stop' command is executed.
+12:09:06 INFO  : 'ps7_init' command is executed.
+12:09:06 INFO  : 'ps7_post_config' command is executed.
+12:09:06 INFO  : 'con' command is executed.
+12:09:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:09:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:09:07 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:09:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:09:07 INFO  : Memory regions updated for context APU
+12:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:09:07 INFO  : 'con' command is executed.
+12:09:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:10:33 INFO  : Disconnected from the channel tcfchan#12.
+12:10:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:10:34 INFO  : 'fpga -state' command is executed.
+12:10:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:10:34 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:10:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:10:35 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:10:35 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:10:35 INFO  : 'stop' command is executed.
+12:10:36 INFO  : 'ps7_init' command is executed.
+12:10:36 INFO  : 'ps7_post_config' command is executed.
+12:10:36 INFO  : 'con' command is executed.
+12:10:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:10:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:10:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:10:37 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:10:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:10:37 INFO  : Memory regions updated for context APU
+12:10:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:10:37 INFO  : 'con' command is executed.
+12:10:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:16:53 INFO  : Disconnected from the channel tcfchan#13.
+12:16:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:16:53 INFO  : 'fpga -state' command is executed.
+12:16:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:16:53 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:16:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:16:54 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:16:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:16:54 INFO  : 'stop' command is executed.
+12:16:55 INFO  : 'ps7_init' command is executed.
+12:16:55 INFO  : 'ps7_post_config' command is executed.
+12:16:55 INFO  : 'con' command is executed.
+12:16:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:16:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:16:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:16:56 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:16:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:16:56 INFO  : Memory regions updated for context APU
+12:16:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:16:57 INFO  : 'con' command is executed.
+12:16:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:17:27 INFO  : Disconnected from the channel tcfchan#14.
+12:17:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:17:28 INFO  : 'fpga -state' command is executed.
+12:17:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:17:28 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:17:28 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:17:28 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:17:29 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:17:29 INFO  : 'stop' command is executed.
+12:17:30 INFO  : 'ps7_init' command is executed.
+12:17:30 INFO  : 'ps7_post_config' command is executed.
+12:17:30 INFO  : 'con' command is executed.
+12:17:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:17:30 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:17:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:17:31 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:17:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:17:31 INFO  : Memory regions updated for context APU
+12:17:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:17:31 INFO  : 'con' command is executed.
+12:17:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:27:02 INFO  : Disconnected from the channel tcfchan#15.
+12:27:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:27:03 INFO  : 'fpga -state' command is executed.
+12:27:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:27:03 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:27:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:27:03 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:27:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:27:04 INFO  : 'stop' command is executed.
+12:27:05 INFO  : 'ps7_init' command is executed.
+12:27:05 INFO  : 'ps7_post_config' command is executed.
+12:27:05 INFO  : 'con' command is executed.
+12:27:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:05 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:27:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:06 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:27:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:27:06 INFO  : Memory regions updated for context APU
+12:27:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:06 INFO  : 'con' command is executed.
+12:27:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:29:08 INFO  : Disconnected from the channel tcfchan#16.
+12:29:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:29:19 INFO  : 'fpga -state' command is executed.
+12:29:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:29:19 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:29:19 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:29:19 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:29:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:29:20 INFO  : 'stop' command is executed.
+12:29:21 INFO  : 'ps7_init' command is executed.
+12:29:21 INFO  : 'ps7_post_config' command is executed.
+12:29:21 INFO  : 'con' command is executed.
+12:29:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:21 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:29:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:22 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:29:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:29:22 INFO  : Memory regions updated for context APU
+12:29:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:22 INFO  : 'con' command is executed.
+12:29:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:29:43 INFO  : Disconnected from the channel tcfchan#17.
+12:29:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:29:44 INFO  : 'fpga -state' command is executed.
+12:29:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:29:44 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:29:44 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:29:44 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:29:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:29:45 INFO  : 'stop' command is executed.
+12:29:46 INFO  : 'ps7_init' command is executed.
+12:29:46 INFO  : 'ps7_post_config' command is executed.
+12:29:46 INFO  : 'con' command is executed.
+12:29:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:46 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:29:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:47 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:29:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:29:47 INFO  : Memory regions updated for context APU
+12:29:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:47 INFO  : 'con' command is executed.
+12:29:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:32:04 INFO  : Disconnected from the channel tcfchan#18.
+12:32:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:32:04 INFO  : 'fpga -state' command is executed.
+12:32:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:32:04 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:32:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:32:05 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:32:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:32:05 INFO  : 'stop' command is executed.
+12:32:06 INFO  : 'ps7_init' command is executed.
+12:32:06 INFO  : 'ps7_post_config' command is executed.
+12:32:06 INFO  : 'con' command is executed.
+12:32:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:32:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:32:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:32:07 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:32:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:32:07 INFO  : Memory regions updated for context APU
+12:32:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:32:08 INFO  : 'con' command is executed.
+12:32:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:32:28 INFO  : Disconnected from the channel tcfchan#19.
+12:32:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:32:29 INFO  : 'fpga -state' command is executed.
+12:32:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:32:29 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:32:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:32:30 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:32:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:32:30 INFO  : 'stop' command is executed.
+12:32:31 INFO  : 'ps7_init' command is executed.
+12:32:31 INFO  : 'ps7_post_config' command is executed.
+12:32:31 INFO  : 'con' command is executed.
+12:32:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:32:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:32:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:32:32 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:32:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:32:32 INFO  : Memory regions updated for context APU
+12:32:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:32:32 INFO  : 'con' command is executed.
+12:32:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:36:14 INFO  : Disconnected from the channel tcfchan#20.
+12:36:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:36:15 INFO  : 'fpga -state' command is executed.
+12:36:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:36:15 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:36:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:36:15 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:36:16 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:36:16 INFO  : 'stop' command is executed.
+12:36:17 INFO  : 'ps7_init' command is executed.
+12:36:17 INFO  : 'ps7_post_config' command is executed.
+12:36:17 INFO  : 'con' command is executed.
+12:36:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:36:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:36:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:36:18 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:36:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:36:18 INFO  : Memory regions updated for context APU
+12:36:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:36:18 INFO  : 'con' command is executed.
+12:36:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:37:06 INFO  : Disconnected from the channel tcfchan#21.
+12:37:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:37:07 INFO  : 'fpga -state' command is executed.
+12:37:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:37:07 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:37:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:37:07 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:37:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:37:08 INFO  : 'stop' command is executed.
+12:37:09 INFO  : 'ps7_init' command is executed.
+12:37:09 INFO  : 'ps7_post_config' command is executed.
+12:37:09 INFO  : 'con' command is executed.
+12:37:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:37:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:37:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:37:10 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:37:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:37:10 INFO  : Memory regions updated for context APU
+12:37:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:37:10 INFO  : 'con' command is executed.
+12:37:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:37:45 INFO  : Disconnected from the channel tcfchan#22.
+12:37:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:37:45 INFO  : 'fpga -state' command is executed.
+12:37:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:37:45 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:37:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:37:46 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:37:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:37:46 INFO  : 'stop' command is executed.
+12:37:47 INFO  : 'ps7_init' command is executed.
+12:37:47 INFO  : 'ps7_post_config' command is executed.
+12:37:47 INFO  : 'con' command is executed.
+12:37:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:37:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:37:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:37:48 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:37:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:37:48 INFO  : Memory regions updated for context APU
+12:37:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:37:49 INFO  : 'con' command is executed.
+12:37:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:38:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:38:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:38:08 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:38:35 INFO  : Disconnected from the channel tcfchan#23.
+12:38:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:38:36 INFO  : 'fpga -state' command is executed.
+12:38:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:38:36 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:38:37 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:38:37 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:38:37 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:38:37 INFO  : 'stop' command is executed.
+12:38:38 INFO  : 'ps7_init' command is executed.
+12:38:38 INFO  : 'ps7_post_config' command is executed.
+12:38:38 INFO  : 'con' command is executed.
+12:38:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:38:39 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:38:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:38:39 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:38:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:38:39 INFO  : Memory regions updated for context APU
+12:38:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:38:39 INFO  : 'con' command is executed.
+12:38:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:39:04 INFO  : Disconnected from the channel tcfchan#24.
+12:39:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:39:04 INFO  : 'fpga -state' command is executed.
+12:39:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:39:04 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:39:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:39:05 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:39:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:39:05 INFO  : 'stop' command is executed.
+12:39:06 INFO  : 'ps7_init' command is executed.
+12:39:06 INFO  : 'ps7_post_config' command is executed.
+12:39:06 INFO  : 'con' command is executed.
+12:39:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:39:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:39:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:39:07 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:39:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:39:07 INFO  : Memory regions updated for context APU
+12:39:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:39:07 INFO  : 'con' command is executed.
+12:39:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:39:44 INFO  : Disconnected from the channel tcfchan#25.
+12:39:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:39:45 INFO  : 'fpga -state' command is executed.
+12:39:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:39:45 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:39:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:39:45 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:39:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:39:46 INFO  : 'stop' command is executed.
+12:39:47 INFO  : 'ps7_init' command is executed.
+12:39:47 INFO  : 'ps7_post_config' command is executed.
+12:39:47 INFO  : 'con' command is executed.
+12:39:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:39:47 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:39:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:39:48 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:39:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:39:48 INFO  : Memory regions updated for context APU
+12:39:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:39:48 INFO  : 'con' command is executed.
+12:39:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:40:20 INFO  : Disconnected from the channel tcfchan#26.
+12:40:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:40:21 INFO  : 'fpga -state' command is executed.
+12:40:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:40:21 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:40:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:40:22 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:40:22 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:40:22 INFO  : 'stop' command is executed.
+12:40:23 INFO  : 'ps7_init' command is executed.
+12:40:23 INFO  : 'ps7_post_config' command is executed.
+12:40:23 INFO  : 'con' command is executed.
+12:40:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:40:24 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:40:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:40:24 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:40:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:40:24 INFO  : Memory regions updated for context APU
+12:40:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:40:24 INFO  : 'con' command is executed.
+12:40:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:41:56 INFO  : Disconnected from the channel tcfchan#27.
+12:41:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:41:56 INFO  : 'fpga -state' command is executed.
+12:41:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:41:57 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:41:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:41:57 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:41:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:41:58 INFO  : 'stop' command is executed.
+12:41:59 INFO  : 'ps7_init' command is executed.
+12:41:59 INFO  : 'ps7_post_config' command is executed.
+12:41:59 INFO  : 'con' command is executed.
+12:41:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:41:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:41:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:42:00 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:42:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:42:00 INFO  : Memory regions updated for context APU
+12:42:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:42:00 INFO  : 'con' command is executed.
+12:42:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:42:31 INFO  : Disconnected from the channel tcfchan#28.
+12:42:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:42:31 INFO  : 'fpga -state' command is executed.
+12:42:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:42:31 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:42:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:42:32 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:42:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:42:32 INFO  : 'stop' command is executed.
+12:42:33 INFO  : 'ps7_init' command is executed.
+12:42:33 INFO  : 'ps7_post_config' command is executed.
+12:42:33 INFO  : 'con' command is executed.
+12:42:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:42:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:42:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:42:34 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:42:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:42:34 INFO  : Memory regions updated for context APU
+12:42:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:42:35 INFO  : 'con' command is executed.
+12:42:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:43:23 INFO  : Disconnected from the channel tcfchan#29.
+12:43:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:43:23 INFO  : 'fpga -state' command is executed.
+12:43:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:43:24 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:43:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:43:24 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:43:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:43:24 INFO  : 'stop' command is executed.
+12:43:25 INFO  : 'ps7_init' command is executed.
+12:43:25 INFO  : 'ps7_post_config' command is executed.
+12:43:26 INFO  : 'con' command is executed.
+12:43:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:43:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:43:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:43:26 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:43:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:43:26 INFO  : Memory regions updated for context APU
+12:43:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:43:27 INFO  : 'con' command is executed.
+12:43:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:47:25 INFO  : Disconnected from the channel tcfchan#30.
+12:47:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:47:25 INFO  : 'fpga -state' command is executed.
+12:47:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:47:26 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:47:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:47:26 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:47:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:47:27 INFO  : 'stop' command is executed.
+12:47:27 INFO  : 'ps7_init' command is executed.
+12:47:28 INFO  : 'ps7_post_config' command is executed.
+12:47:28 INFO  : 'con' command is executed.
+12:47:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:47:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:47:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:47:29 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:47:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:47:29 INFO  : Memory regions updated for context APU
+12:47:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:47:29 INFO  : 'con' command is executed.
+12:47:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:48:58 INFO  : Disconnected from the channel tcfchan#31.
+12:48:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:48:58 INFO  : 'fpga -state' command is executed.
+12:48:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:48:59 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:48:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:48:59 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:48:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:48:59 INFO  : 'stop' command is executed.
+12:49:00 INFO  : 'ps7_init' command is executed.
+12:49:00 INFO  : 'ps7_post_config' command is executed.
+12:49:01 INFO  : 'con' command is executed.
+12:49:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:49:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:49:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:49:01 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:49:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:49:02 INFO  : Memory regions updated for context APU
+12:49:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:49:02 INFO  : 'con' command is executed.
+12:49:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:49:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:49:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:49:58 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:50:09 INFO  : Disconnected from the channel tcfchan#32.
+12:50:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:50:10 INFO  : 'fpga -state' command is executed.
+12:50:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:50:10 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:50:10 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:50:11 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:50:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:50:11 INFO  : 'stop' command is executed.
+12:50:12 INFO  : 'ps7_init' command is executed.
+12:50:12 INFO  : 'ps7_post_config' command is executed.
+12:50:12 INFO  : 'con' command is executed.
+12:50:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:50:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:50:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:50:13 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:50:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:50:13 INFO  : Memory regions updated for context APU
+12:50:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:50:13 INFO  : 'con' command is executed.
+12:50:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:52:25 INFO  : Disconnected from the channel tcfchan#33.
+12:52:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:52:26 INFO  : 'fpga -state' command is executed.
+12:52:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:52:26 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:52:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:52:26 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:52:27 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:52:27 INFO  : 'stop' command is executed.
+12:52:28 INFO  : 'ps7_init' command is executed.
+12:52:28 INFO  : 'ps7_post_config' command is executed.
+12:52:28 INFO  : 'con' command is executed.
+12:52:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:52:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:52:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:52:29 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:52:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:52:29 INFO  : Memory regions updated for context APU
+12:52:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:52:29 INFO  : 'con' command is executed.
+12:52:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+12:55:11 INFO  : Disconnected from the channel tcfchan#34.
+12:55:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+12:55:12 INFO  : 'fpga -state' command is executed.
+12:55:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:55:12 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:55:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:55:13 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:55:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+12:55:13 INFO  : 'stop' command is executed.
+12:55:14 INFO  : 'ps7_init' command is executed.
+12:55:14 INFO  : 'ps7_post_config' command is executed.
+12:55:14 INFO  : 'con' command is executed.
+12:55:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:55:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:15 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:55:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+12:55:15 INFO  : Memory regions updated for context APU
+12:55:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:15 INFO  : 'con' command is executed.
+12:55:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+13:00:50 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:00:52 INFO  : XSDB server has started successfully.
+13:00:52 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+13:00:53 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+13:01:12 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:01:13 INFO  : XSDB server has started successfully.
+13:01:14 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+13:01:14 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+13:01:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:01:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:01:33 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:01:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:01:44 INFO  : 'fpga -state' command is executed.
+13:01:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:01:44 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:01:44 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:01:44 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:01:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:01:46 INFO  : 'stop' command is executed.
+13:04:25 INFO  : 'ps7_init' command is executed.
+13:04:28 INFO  : 'ps7_post_config' command is executed.
+13:04:28 INFO  : 'con' command is executed.
+13:04:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:04:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:04:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:04:31 INFO  : 'fpga -state' command is executed.
+13:04:31 INFO  : 'fpga -state' command is executed.
+13:04:31 INFO  : 'fpga -state' command is executed.
+13:04:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:31 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:04:31 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:04:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:04:31 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:04:31 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:04:31 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:04:31 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:04:31 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:04:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:31 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:04:32 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:04:32 ERROR : AP transaction timeout
+13:04:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+13:04:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:04:32 ERROR : no targets found with "name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"". available targets:
+  1* APU (JTAG port open error. AP transaction error, DAP status f0000021)
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (DEVICEEN is '0')
+  4  xc7z010
+13:04:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+----------------End of Script----------------
+
+13:04:32 INFO  : 'stop' command is executed.
+13:04:32 ERROR : no targets found with "name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"". available targets:
+  1* APU (JTAG port open error. AP transaction error, DAP status f0000021)
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (DEVICEEN is '0')
+  4  xc7z010
+13:04:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+----------------End of Script----------------
+
+13:04:32 ERROR : AP transaction error, DAP status f0000021
+13:04:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+----------------End of Script----------------
+
+13:04:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:04:48 ERROR : Error occured during Prog B register check
+13:04:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:04:58 ERROR : Error occured during Prog B register check
+13:05:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:05:09 INFO  : FPGA configured successfully with bitstream "/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:05:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:05:16 INFO  : 'fpga -state' command is executed.
+13:05:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:16 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:05:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:05:17 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:05:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:05:17 INFO  : 'stop' command is executed.
+13:05:18 INFO  : 'ps7_init' command is executed.
+13:05:18 INFO  : 'ps7_post_config' command is executed.
+13:05:19 INFO  : 'con' command is executed.
+13:05:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:05:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:20 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:05:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+13:05:20 INFO  : Memory regions updated for context APU
+13:05:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:21 INFO  : 'con' command is executed.
+13:05:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+13:06:33 INFO  : Disconnected from the channel tcfchan#1.
+13:06:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:06:33 INFO  : 'fpga -state' command is executed.
+13:06:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:06:33 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:06:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:06:34 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:06:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:06:34 INFO  : 'stop' command is executed.
+13:06:35 INFO  : 'ps7_init' command is executed.
+13:06:35 INFO  : 'ps7_post_config' command is executed.
+13:06:35 INFO  : 'con' command is executed.
+13:06:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:06:36 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:06:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:06:36 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:06:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+13:06:36 INFO  : Memory regions updated for context APU
+13:06:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:06:37 INFO  : 'con' command is executed.
+13:06:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+13:07:49 INFO  : Disconnected from the channel tcfchan#2.
+13:07:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:07:50 INFO  : 'fpga -state' command is executed.
+13:07:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:07:50 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:07:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:07:50 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:07:51 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:07:51 INFO  : 'stop' command is executed.
+13:07:52 INFO  : 'ps7_init' command is executed.
+13:07:52 INFO  : 'ps7_post_config' command is executed.
+13:07:52 INFO  : 'con' command is executed.
+13:07:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:07:52 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:07:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:07:53 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:07:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+13:07:53 INFO  : Memory regions updated for context APU
+13:07:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:07:53 INFO  : 'con' command is executed.
+13:07:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+13:58:20 INFO  : Disconnected from the channel tcfchan#3.
+13:58:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771704A" && level==0} -index 1' command is executed.
+13:58:21 INFO  : 'fpga -state' command is executed.
+13:58:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:58:21 INFO  : Sourcing of '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:58:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:58:22 INFO  : Hardware design information is loaded from '/home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:58:22 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0' command is executed.
+13:58:22 INFO  : 'stop' command is executed.
+13:58:23 INFO  : 'ps7_init' command is executed.
+13:58:23 INFO  : 'ps7_post_config' command is executed.
+13:58:23 INFO  : 'con' command is executed.
+13:58:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:58:24 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:58:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:58:24 INFO  : The application '/home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:58:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+loadhw /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+dow /home/matthias/robtekF16/emb/pongit/pongit.sdk/statemachine/Debug/statemachine.elf
+----------------End of Script----------------
+
+13:58:24 INFO  : Memory regions updated for context APU
+13:58:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:58:24 INFO  : 'con' command is executed.
+13:58:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771704A"} -index 0
+con
+----------------End of Script----------------
+
+20:41:33 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 321 xsdb eval "disconnect tcfchan#4"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Communication channel is closed by remote peer
+	at org.eclipse.tcf.core.AbstractChannel$1$2.run(AbstractChannel.java:305)
+	... 2 more
+11:33:36 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:33:42 INFO  : XSDB server has started successfully.
+11:33:44 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+11:33:45 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:33:49 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1462181549000,  Project:1461572160000
+11:33:49 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+11:33:49 INFO  : Copied contents of /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+11:33:53 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:33:59 INFO  : 
+11:34:00 INFO  : Updating hardware inferred compiler options for statemachine.
+11:34:00 INFO  : Clearing existing target manager status.
+12:31:06 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

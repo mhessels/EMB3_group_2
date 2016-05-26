@@ -1,0 +1,116 @@
+ #include <stdio.h>
+ #include "platform.h"
+ #include "xgpio.h"
+#include "xil_printf.h"
+ #include "xstatus.h"
+ 
+ #define BUTTON_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+ #define SWITCH_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
+ #define LED_DEVICE_ID    XPAR_AXI_GPIO_2_DEVICE_ID
+ 
+ #define printf xil_printf							/* smaller, optimised printf */
+
+ #define PADDLE_SPEED_SCALE 0.00001
+ 
+ typedef enum {INITIALIZE,MENU,READ_GPIO,MOVE,CALCULATE,UPDATE_SCREEN} STATE;
+ 
+ XGpio gpio_button;
+ XGpio gpio_switch;
+ XGpio gpio_led;
+ 
+ //USER DEFINED FUNCTIONS
+ int gpio_initialize();
+ void statemachine(int state); // the main function that loops between the different states
+ 
+ int main()
+ {
+   init_platform();
+   
+   int state = INITIALIZE;
+   statemachine(state);
+   
+   cleanup_platform();
+   return 0;
+ }
+ 
+ void statemachine(int state){
+   u32 sw_1 = 0, sw_2 = 0, sw_3 = 0 , sw_4 = 0, btn_1 = 0, btn_2 = 0, init = 0;
+   double paddle_1_pos = 0.0, paddle_2_pos = 0.0;
+   int temp = 0x1;
+   while(1){
+     switch(state){
+       case INITIALIZE:
+         init = gpio_initialize();
+         if(init == 0){
+           state = READ_GPIO;
+         }
+         break;
+       case READ_GPIO: ;
+       u32 button_state = XGpio_DiscreteRead(&gpio_button,1);
+       u32 switch_state = XGpio_DiscreteRead(&gpio_switch,1);
+       sw_1 = switch_state & (0x1);
+       sw_2 = switch_state & (0x2);
+       sw_3 = switch_state & (0x4);
+       sw_4 = switch_state & (0x8);
+       btn_1 = button_state & (0x1);
+       btn_2 = button_state & (0x2);
+       btn_3 = button_state & (0x4);
+       btn_4 = button_state & (0x8);
+       state = MOVE;
+       break;  // TODO add read of the gpio and do some stuff based on this
+       case MOVE: ;
+       int move_p1_up = 0;
+       int move_p2_up = 0;
+       //Check if player 1 has to move
+       if(sw_1 & btn_1){
+         if(paddle_1_pos < 5){
+           move_p1_up = 1;
+         }
+       }else if(btn_1){
+         if(paddle_1_pos > 0){
+           move_p1_up = -1;
+         }
+       }
+       //Check if player 2 has to move
+       if(sw_2 & btn_2){
+         if(paddle_2_pos < 5){
+           move_p2_up = 1;
+         }
+       }else if(btn_2){
+         if(paddle_2_pos > 0){
+           move_p2_up = -1;
+         }
+       }
+       paddle_1_pos += PADDLE_SPEED_SCALE*move_p1_up;
+       paddle_2_pos += PADDLE_SPEED_SCALE*move_p2_up;
+       XGpio_DiscreteWrite(&gpio_led,1,(int)paddle_2_pos);
+       state = MENU;
+       break; // TODO update the memory map with the paddle move
+       case MENU:
+
+    	 state = CALCULATE;
+       case CALCULATE:
+    	state = UPDATE_SCREEN;
+    	break; //TODO calculate the ball movement and update the score if there is a score, then update the memory map.
+       case UPDATE_SCREEN:
+        state = READ_GPIO;
+        break; //TODO tell screen that an the cycle is done. This may not be needed
+     }
+   }
+ }
+ 
+ int gpio_initialize(){
+   
+   int status = 0; //indicator for if the initialization was successful
+   
+   status |= XGpio_Initialize(&gpio_button, BUTTON_DEVICE_ID);
+   status |= XGpio_Initialize(&gpio_switch, SWITCH_DEVICE_ID);
+   status |= XGpio_Initialize(&gpio_led, LED_DEVICE_ID);
+   
+   XGpio_SetDataDirection(&gpio_button,1,0xFF);
+   XGpio_SetDataDirection(&gpio_switch,1,0xFF);
+   XGpio_SetDataDirection(&gpio_led,1,0x00);
+   XGpio_DiscreteWrite(&gpio_led,1,0x9);
+   return status;
+ }
+ 
