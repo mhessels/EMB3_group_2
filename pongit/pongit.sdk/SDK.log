@@ -2048,3 +2048,14 @@ Caused by: java.io.IOException: Communication channel is closed by remote peer
 11:34:00 INFO  : Updating hardware inferred compiler options for statemachine.
 11:34:00 INFO  : Clearing existing target manager status.
 12:31:06 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:44:28 INFO  : Launching XSDB server: xsdb -n /home/matthias/programs/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:44:32 INFO  : XSDB server has started successfully.
+18:44:38 INFO  : Processing command line option -hwspec /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+18:44:39 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+18:44:43 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1464367123000,  Project:1462181549000
+18:44:43 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf.
+18:44:43 INFO  : Copied contents of /home/matthias/robtekF16/emb/pongit/pongit.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+18:44:48 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:44:55 INFO  : 
+18:44:56 INFO  : Updating hardware inferred compiler options for statemachine.
+18:44:56 INFO  : Clearing existing target manager status.

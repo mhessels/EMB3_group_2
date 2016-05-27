@@ -1,4 +1,4 @@
-11:35:12 **** Auto Build of project statemachine_bsp ****
+18:47:45 **** Auto Build of project statemachine_bsp ****
 make -k all 
 Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_0/src
 make -C ps7_cortexa9_0/libsrc/axidma_v9_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
@@ -137,5 +137,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER
 Compiling xadcps
 Finished building libraries
 
-11:35:23 Build Finished (took 11s.167ms)
+18:47:55 Build Finished (took 9s.636ms)
 
